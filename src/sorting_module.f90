@@ -14,8 +14,7 @@
     type,abstract,public :: item
         !! An item to be sorted or searched.
         !!
-        !! Have to define the operators and
-        !! the swap function.
+        !! User has to define the operator and assignment functions.
     contains
         private
         generic,public :: operator(>)   => greater_than
@@ -30,9 +29,9 @@
 
     abstract interface
         pure elemental subroutine assign_equal_func(v1,v2)
-            !!@note Gfortran is complaining that `v1`
-            !!      may not be polymorphic because the
-            !!      procedure is pure.
+            !!@warning Gfortran is complaining that `v1`
+            !!         may not be polymorphic because the
+            !!         procedure is pure.
             import :: item
             implicit none
             class(item),intent(out) :: v1
