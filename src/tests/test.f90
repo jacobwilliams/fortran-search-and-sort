@@ -18,6 +18,8 @@
 
     integer_list = [9,77,1,2,3,10,2,6,1,1]
 
+    !listvec(1 ) = [ 7,20,31,9 ]  ! intvec_assign_equal_vec ... doesn't work?
+
     listvec(1 )%i = [ 7,20,31,9 ]
     listvec(2 )%i = [ 3,22,36,8 ]
     listvec(3 )%i = [ 3,22,35,7 ]
@@ -43,17 +45,7 @@
     listvec(23)%i = [ 7,20,33,10 ]
     listvec(24)%i = [ 3,20,31,1 ]
 
-    !list = int([9,77,1,2,3,10,2,6,1,1])  ! error #5270: Internal Compiler Error: symbol not a SYMTOK
-    list(1)%i   = 9
-    list(2)%i   = 77
-    list(3)%i   = 1
-    list(4)%i   = 2
-    list(5)%i   = 3
-    list(6)%i   = 10
-    list(7)%i   = 2
-    list(8)%i   = 6
-    list(9)%i   = 1
-    list(10)%i  = 1
+    list = int([9,77,1,2,3,10,2,6,1,1])  ! elemental constructor
 
     write(*,*) ''
     write(*,*) 'original list:'

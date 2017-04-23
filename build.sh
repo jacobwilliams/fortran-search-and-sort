@@ -20,7 +20,7 @@ FORDMD='sorting.md'             # FORD config file name
 #FCOMPILER='gnu' #Set compiler to gfortran
 #FCOMPILERFLAGS='-c -O2 -std=f2008'
 FCOMPILER='intel' #Set compiler to intel
-FCOMPILERFLAGS='-c -O2 -warn -stand f08 -traceback'
+FCOMPILERFLAGS='-c -O2 -warn -stand f15 -traceback'
 
 #build using FoBiS:
 

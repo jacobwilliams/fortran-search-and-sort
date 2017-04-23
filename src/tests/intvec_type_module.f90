@@ -13,7 +13,8 @@
         procedure :: greater_than => intvec_greater_than
         procedure :: less_than    => intvec_less_than
         procedure :: equal_to     => intvec_equal_to
-        procedure :: assign_equal => intvec_assign_equal
+        procedure :: assign_equal => intvec_assign_equal,&
+                                     intvec_assign_equal_vec
     end type intvec
 
     contains
@@ -26,9 +27,16 @@
         class is (intvec)
             v1%i = v2%i
         class default
-            !error stop 'assignment not defined'
+            error stop 'assignment not defined'
         end select
     end subroutine intvec_assign_equal
+
+    pure subroutine intvec_assign_equal_vec(v1,v2)  ! doesn't work?
+        implicit none                               !
+        class(intvec),intent(out) :: v1             !
+        integer,dimension(4),intent(in) :: v2       !
+        v1%i = v2                                   !
+    end subroutine intvec_assign_equal_vec          !
 
     pure elemental function intvec_greater_than(v1,v2) result(gt)
         implicit none
@@ -54,7 +62,7 @@
                 end do
             end if
         class default
-            !error stop '> operator not defined'
+            error stop '> operator not defined'
         end select
     end function intvec_greater_than
 
@@ -75,7 +83,7 @@
         class is (intvec)
             eq = all(v1%i == v2%i)
         class default
-            !error stop '== operator not defined'
+            error stop '== operator not defined'
         end select
     end function intvec_equal_to
 

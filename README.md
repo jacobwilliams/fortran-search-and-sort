@@ -11,6 +11,8 @@ Includes the routines:
  * `subroutine sort_ascending(vec)`
  * `subroutine sort_descending(vec)`
 
+This library has been tested with the Intel Fortran compiler v17.0.2.
+
 ### See also
 
  * [stringsort](https://github.com/jacobwilliams/stringsort) -- Sorting routines for strings.

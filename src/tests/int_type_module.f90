@@ -21,7 +21,7 @@
 
     contains
 
-    pure elemental function int_constructor(i)  ! ifort internal compiler when using ...
+    pure elemental function int_constructor(i)
         implicit none
         type(int) :: int_constructor
         integer,intent(in) :: i
