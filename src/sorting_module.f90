@@ -111,6 +111,7 @@
                      real64_binary_search,real32_binary_search
     end interface binary_search
 
+    public :: expand_vector
     public :: unique
     public :: sort_ascending
     public :: sort_descending
