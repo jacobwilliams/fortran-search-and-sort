@@ -2,7 +2,7 @@
 
     contains
 
-        pure recursive subroutine quicksort(ilow,ihigh)
+        recursive subroutine quicksort(ilow,ihigh)
 
         !! Sort the array (descending order).
 
@@ -39,7 +39,7 @@
 
         end subroutine quicksort
 
-        pure subroutine partition(ilow,ihigh,ipivot)
+        subroutine partition(ilow,ihigh,ipivot)
 
         !! Partition the array
 

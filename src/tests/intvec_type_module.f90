@@ -19,7 +19,7 @@
 
     contains
 
-    pure elemental subroutine intvec_assign_equal(v1,v2)
+    subroutine intvec_assign_equal(v1,v2)
         implicit none
         class(intvec),intent(out) :: v1
         class(item),intent(in)  :: v2
@@ -31,14 +31,14 @@
         end select
     end subroutine intvec_assign_equal
 
-    pure subroutine intvec_assign_equal_vec(v1,v2)  ! doesn't work?
+    subroutine intvec_assign_equal_vec(v1,v2)  ! doesn't work?
         implicit none                               !
         class(intvec),intent(out) :: v1             !
         integer,dimension(4),intent(in) :: v2       !
         v1%i = v2                                   !
     end subroutine intvec_assign_equal_vec          !
 
-    pure elemental function intvec_greater_than(v1,v2) result(gt)
+    function intvec_greater_than(v1,v2) result(gt)
         implicit none
         class(intvec),intent(in) :: v1
         class(item),intent(in) :: v2
@@ -66,7 +66,7 @@
         end select
     end function intvec_greater_than
 
-    pure elemental function intvec_less_than(v1,v2) result(lt)
+    function intvec_less_than(v1,v2) result(lt)
         implicit none
         class(intvec),intent(in) :: v1
         class(item),intent(in) :: v2
@@ -74,7 +74,7 @@
         lt = (.not.(v1==v2)) .and. (.not.(v1>v2))
     end function intvec_less_than
 
-    pure elemental function intvec_equal_to(v1,v2) result(eq)
+    function intvec_equal_to(v1,v2) result(eq)
         implicit none
         class(intvec),intent(in) :: v1
         class(item),intent(in) :: v2

@@ -8,7 +8,7 @@
     implicit none
 
     integer,dimension(10)      :: integer_list
-    type(int),dimension(10)    :: list
+    type(myint),dimension(10)    :: list
     type(intvec),dimension(24) :: listvec
 
     class(item),dimension(:),allocatable :: unique_elements
@@ -45,7 +45,8 @@
     listvec(23)%i = [ 7,20,33,10 ]
     listvec(24)%i = [ 3,20,31,1 ]
 
-    list = int([9,77,1,2,3,10,2,6,1,1])  ! elemental constructor
+    !list = int([9,77,1,2,3,10,2,6,1,1])  ! how to make this happen?
+    list%i = int([9,77,1,2,3,10,2,6,1,1])
 
     write(*,*) ''
     write(*,*) 'original list:'
@@ -60,7 +61,7 @@
     call unique(list,unique_elements)
 
     select type (unique_elements)
-    type is (int)
+    type is (myint)
         write(*,*) ''
         write(*,*) 'unique elements:'
         write(*,*) unique_elements

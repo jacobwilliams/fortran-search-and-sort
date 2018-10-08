@@ -28,30 +28,27 @@
     end type item
 
     abstract interface
-        pure elemental subroutine assign_equal_func(v1,v2)
-            !!@warning Gfortran is complaining that `v1`
-            !!         may not be polymorphic because the
-            !!         procedure is pure.
+        subroutine assign_equal_func(v1,v2)
             import :: item
             implicit none
             class(item),intent(out) :: v1
             class(item),intent(in)  :: v2
         end subroutine assign_equal_func
-        pure elemental function greater_than_func(v1,v2) result(gt)
+        function greater_than_func(v1,v2) result(gt)
             import :: item
             implicit none
             class(item),intent(in) :: v1
             class(item),intent(in) :: v2
             logical :: gt
         end function greater_than_func
-        pure elemental function less_than_func(v1,v2) result(lt)
+        function less_than_func(v1,v2) result(lt)
             import :: item
             implicit none
             class(item),intent(in) :: v1
             class(item),intent(in) :: v2
             logical :: lt
         end function less_than_func
-        pure elemental function equal_to_func(v1,v2) result(eq)
+        function equal_to_func(v1,v2) result(eq)
             import :: item
             implicit none
             class(item),intent(in) :: v1
