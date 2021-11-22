@@ -10,7 +10,7 @@
     if (present(val)) then
         if (n==size(vec)) then
             ! have to add another chunk:
-            allocate(tmp(size(vec)+chunk_size), source=vec)
+            allocate(tmp(size(vec)+chunk_size), mold=vec)
             do i=1,size(vec)
                 tmp(i) = vec(i)
             end do
@@ -24,7 +24,7 @@
         if (finished) then
             ! set vec to actual size (n):
             if (allocated(tmp)) deallocate(tmp)
-            allocate(tmp(n), source=vec)
+            allocate(tmp(n), mold=vec)
             do i=1,n
                 tmp(i) = vec(i)
             end do

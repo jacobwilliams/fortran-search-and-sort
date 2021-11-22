@@ -21,10 +21,10 @@
         generic,public :: operator(<)   => less_than
         generic,public :: operator(==)  => equal_to
         generic,public :: assignment(=) => assign_equal
-        procedure(greater_than_func),deferred :: greater_than
-        procedure(less_than_func),deferred    :: less_than
-        procedure(equal_to_func),deferred     :: equal_to
-        procedure(assign_equal_func),deferred :: assign_equal
+        procedure(greater_than_func),deferred,public :: greater_than
+        procedure(less_than_func),deferred,public    :: less_than
+        procedure(equal_to_func),deferred,public     :: equal_to
+        procedure(assign_equal_func),deferred,public :: assign_equal
     end type item
 
     abstract interface

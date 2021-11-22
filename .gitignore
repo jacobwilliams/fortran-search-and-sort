@@ -1,6 +1,9 @@
 # Directories
 /bin
 /doc
+/build
+/lib
+/bin
 
 # Compiled Object files
 *.slo
@@ -31,3 +34,6 @@
 *.exe
 *.out
 *.app
+
+# Misc
+.DS_Store

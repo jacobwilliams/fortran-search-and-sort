@@ -1,0 +1,23 @@
+name = "fortran-search-and-sort"
+author = "Jacob Williams"
+copyright  = "Copyright (c) 2017-2021, Jacob Williams"
+license = "BSD-3"
+description = "Searching and sorting with modern Fortran"
+homepage = "https://github.com/jacobwilliams/fortran-search-and-sort"
+keywords = ["sorting", "quicksort"]
+
+[build]
+auto-executables = false
+auto-examples = false
+auto-tests = false
+
+[library]
+source-dir = "src"
+
+[install]
+library = true
+
+[[test]]
+name = "test"
+source-dir = "tests"
+main = "test.f90"

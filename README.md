@@ -11,7 +11,20 @@ Includes the routines:
  * `subroutine sort_ascending(vec)`
  * `subroutine sort_descending(vec)`
 
-This library has been tested with the Intel Fortran compiler v17.0.2.
+### Compiling
+
+The library and test program will build with any modern Fortran compiler. A [Fortran Package Manager](https://github.com/fortran-lang/fpm) manifest file (`fmp.toml`) is included, so that the library and tests cases can be compiled with FPM. For example:
+
+```text
+fpm build --profile release
+fpm test --profile release
+```
+
+To generate the documentation using [ford](https://github.com/Fortran-FOSS-Programmers/ford), run:
+
+```text
+ford sorting.md
+```
 
 ### See also
 

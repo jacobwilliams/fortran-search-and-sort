@@ -12,6 +12,6 @@ docmark: !
 display: public
 source: true
 graph: false
-exclude_dir: src/tests
+exclude_dir: ./tests
 
 {!README.md!}
