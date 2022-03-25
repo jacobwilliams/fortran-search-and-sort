@@ -1,3 +1,10 @@
+### Status
+
+[![GitHub release](https://img.shields.io/github/release/jacobwilliams/fortran-search-and-sort.svg?style=plastic)](https://github.com/jacobwilliams/fortran-search-and-sort/releases/latest)
+![CI Status](https://github.com/jacobwilliams/fortran-search-and-sort/actions/workflows/CI.yml/badge.svg)
+[![codecov](https://codecov.io/gh/jacobwilliams/fortran-search-and-sort/branch/master/graph/badge.svg?token=43HK33CSMY)](https://codecov.io/gh/jacobwilliams/fortran-search-and-sort)
+
+
 ### Description
 
 Basic sorting and searching routines for vectors.
