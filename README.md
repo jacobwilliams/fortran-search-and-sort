@@ -27,11 +27,22 @@ fpm build --profile release
 fpm test --profile release
 ```
 
+To use `fortran-search-and-sort` within your FPM project, add the following to your `fpm.toml` file:
+```toml
+[dependencies]
+NumDiff = { git="https://github.com/jacobwilliams/fortran-search-and-sort.git" }
+```
+
 To generate the documentation using [ford](https://github.com/Fortran-FOSS-Programmers/ford), run:
 
 ```text
 ford sorting.md
 ```
+
+## Documentation
+
+The latest API documentation can be found [here](https://jacobwilliams.github.io/fortran-search-and-sort/). This was generated from the source code using [FORD](https://github.com/Fortran-FOSS-Programmers/ford).
+
 
 ### See also
 

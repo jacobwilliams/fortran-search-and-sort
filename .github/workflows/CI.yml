@@ -70,11 +70,11 @@ jobs:
         files: build/coverage/coverage.info
 
     - name: Build documentation
-      run: ford ./fmin.md
+      run: ford ./fortran-search-and-sort.md
 
-    # - name: Deploy Documentation
-    #   if: github.ref == 'refs/heads/master'
-    #   uses: JamesIves/github-pages-deploy-action@4.1.0
-    #   with:
-    #     branch: gh-pages # The branch the action should deploy to.
-    #     folder: doc  # The folder the action should deploy.
+    - name: Deploy Documentation
+      if: github.ref == 'refs/heads/master'
+      uses: JamesIves/github-pages-deploy-action@4.1.0
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: doc  # The folder the action should deploy.
