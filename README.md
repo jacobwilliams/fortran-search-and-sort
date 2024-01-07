@@ -19,7 +19,7 @@ Includes the routines:
 
 ### Compiling
 
-The library and test program will build with any modern Fortran compiler. A [Fortran Package Manager](https://github.com/fortran-lang/fpm) manifest file (`fmp.toml`) is included, so that the library and tests cases can be compiled with FPM. For example:
+The library and test program will build with any modern Fortran compiler. A [Fortran Package Manager](https://github.com/fortran-lang/fpm) manifest file (`fpm.toml`) is included, so that the library and tests cases can be compiled with FPM. For example:
 
 ```text
 fpm build --profile release
@@ -35,7 +35,7 @@ fortran-search-and-sort = { git="https://github.com/jacobwilliams/fortran-search
 To generate the documentation using [ford](https://github.com/Fortran-FOSS-Programmers/ford), run:
 
 ```text
-ford sorting.md
+ford ford.md
 ```
 
 ### Documentation
